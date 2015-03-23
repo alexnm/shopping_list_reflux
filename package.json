@@ -1,0 +1,42 @@
+{
+  "name": "shopping_list",
+  "version": "0.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexnm/shopping_list.git"
+  },
+  "author": "alexnm",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/alexnm/shopping_list/issues"
+  },
+  "homepage": "https://github.com/alexnm/shopping_list",
+  "dependencies": {
+    "flux": "^2.0.0",
+    "react": "^0.12.0",
+    "object-assign": "^1.0.0",
+    "react-router": "~0.12.2",
+    "express": "~4.12.1",
+    "body-parser": "~1.12.0",
+    "superagent": "~0.21.0"
+  },
+  "devDependencies": {
+    "browserify": "~6.2.0",
+    "envify": "~3.0.0",
+    "react": "^0.12.0",
+    "reactify": "^0.15",
+    "watchify": "~2.1.0"
+  },
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "build": "browserify js/app.js | uglifyjs -cm > js/bundle.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

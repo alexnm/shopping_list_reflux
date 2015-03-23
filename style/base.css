@@ -1,0 +1,51 @@
+.active {
+	font-weight: bolder;
+}
+
+.content {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.delete {
+	color: red;
+	font-weight: bolder;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.example-enter {
+	transform: scaleY(0);
+	transition: all .3s;
+}
+
+.example-enter.example-enter-active {
+	transform: scaleY(1);
+}
+
+.example-leave {
+	transform: scaleY(1);
+	transition: all .3s;
+}
+
+.example-leave.example-leave-active {
+	transform: scaleY(0);
+}
+
+.input[type='text'] {
+	width: 150px;
+}
+
+.input[type='number'] {
+	width: 100px;
+}
+
+.shopping-list-item {
+	margin: 10px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.shopping-list-item.checked {
+	text-decoration: line-through;
+}
