@@ -3,7 +3,9 @@ var Reflux = require('reflux');
 var Actions = Reflux.createActions([
     "addItem",
     "checkItem",
-    "removeItem"
+    "removeItem",
+    "getData",
+    "receiveData"
   ]);
 
 module.exports = Actions;

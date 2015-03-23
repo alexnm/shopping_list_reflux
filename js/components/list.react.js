@@ -6,6 +6,8 @@ var ShoppingListActions = require('../actions/shopping_list_actions');
 
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
+ShoppingListActions.getData();
+
 var ShoppingList = React.createClass({
 	componentDidMount: function() {
     this.unsubscribe = ShoppingListStore.listen(this.onChange);
