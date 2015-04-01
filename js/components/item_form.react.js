@@ -3,7 +3,7 @@ var React = require('react/addons');
 var DEFAULT_UNIT = 'pcs';
 
 var ItemForm = React.createClass({
-  handleSubmit: function(e) {
+  handleSubmit(e) {
     e.preventDefault();
     var newItem = {
       name: this.refs.name.getDOMNode().value.trim(),
@@ -21,7 +21,7 @@ var ItemForm = React.createClass({
 
     this.refs.name.getDOMNode().focus();
   },
-  render: function() {
+  render() {
     return (
       <form className="itemForm" onSubmit={ this.handleSubmit }>
         <div>

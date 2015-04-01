@@ -3,13 +3,10 @@ var Router = require('react-router');
 var ShoppingList = require('./components/list.react');
 var Home = require('./components/home.react');
 require('./stores/api_store');
-var Route = Router.Route; 
-var DefaultRoute = Router.DefaultRoute;
-var RouteHandler = Router.RouteHandler;
-var Link = Router.Link;
+var { Route, DefaultRoute, RouteHandler, Link } = Router; 
 
 var App = React.createClass({
-	render: function() {
+	render() {
 		return (
 				<div>
 					<ul>

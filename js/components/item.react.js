@@ -1,14 +1,14 @@
 var React = require('react/addons');
 
 var ShoppingListItem = React.createClass({
-	handleRemove: function( event ) {
+	handleRemove( event ) {
 		event.stopPropagation();
 		this.props.onItemRemoved(this.props.index);
 	},
-	handleCheck: function() {
+	handleCheck() {
 		this.props.onItemChecked(this.props.index);
 	},
-	render: function() {
+	render() {
 		var item = this.props.item;
 		var itemClass = React.addons.classSet({
 			'shopping-list-item': true,

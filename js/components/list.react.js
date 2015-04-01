@@ -9,30 +9,30 @@ var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 ShoppingListActions.getData();
 
 var ShoppingList = React.createClass({
-	componentDidMount: function() {
+	componentDidMount() {
     this.unsubscribe = ShoppingListStore.listen(this.onChange);
   },
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.unsubscribe();
   },
-	onChange: function() {
+	onChange() {
 		this.setState( { items: ShoppingListStore.getAll() } );
 	},
-	addItem: function( newItem ) {
+	addItem( newItem ) {
 		ShoppingListActions.addItem( newItem );
 	},
-	removeItem: function( index ) {
+	removeItem( index ) {
 		ShoppingListActions.removeItem( index );
 	},
-	toggleItem: function( index ) {
+	toggleItem( index ) {
 		ShoppingListActions.checkItem( index );
 	},
-	getInitialState: function() {
+	getInitialState() {
 		return { items : ShoppingListStore.getAll() };
 	},
-	render: function() {
+	render() {
 
-		var itemList = this.state.items.map( function(item, index) {
+		var itemList = this.state.items.map( (item, index) => {
 			return (
 				<ShoppingListItem
 						key = { index }
